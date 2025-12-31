@@ -52,7 +52,7 @@
                                         <a href="{{ route('programs.short-course') }}">Short course</a>
                                     </li>
                                     <li class="hover:underline hover:text-secondary duration-300">
-                                        <a href="">Regular program private</a>
+                                        <a href="{{ route('programs.regular-program-private') }}">Regular program private</a>
                                     </li>
                                     <li class="hover:underline hover:text-secondary duration-300">
                                         <a href="">Diploma 1 year</a>
@@ -151,7 +151,7 @@
                                     <a href="{{ route('programs.short-course') }}">Short course</a>
                                 </li>
                                 <li class="hover:underline hover:text-secondary duration-300">
-                                    <a href="">Regular program private</a>
+                                    <a href="{{ route('programs.regular-program-private') }}">Regular program private</a>
                                 </li>
                                 <li class="hover:underline hover:text-secondary duration-300">
                                     <a href="">Diploma 1 year</a>
