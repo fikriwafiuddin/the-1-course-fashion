@@ -45,11 +45,11 @@
                             {{-- Dropdown Programs --}}
                             <div
                                 id="dropdownPrograms"
-                                class="hidden sm:block absolute w-max bg-white rounded-sm max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out"
+                                class="hidden sm:block absolute w-max bg-white rounded-sm shadow-lg max-h-0 overflow-hidden opacity-0 transition-all duration-300 ease-in-out"
                             >
                                 <ul class="p-4 space-y-2">
                                     <li class="hover:underline hover:text-secondary duration-300">
-                                        <a href="">Short course</a>
+                                        <a href="{{ route('programs.short-course') }}">Short course</a>
                                     </li>
                                     <li class="hover:underline hover:text-secondary duration-300">
                                         <a href="">Regular program private</a>
@@ -148,7 +148,7 @@
                         >
                             <ul class="pl-4 py-2 space-y-2 text-sm">
                                 <li class="hover:underline hover:text-secondary duration-300">
-                                    <a href="">Short course</a>
+                                    <a href="{{ route('programs.short-course') }}">Short course</a>
                                 </li>
                                 <li class="hover:underline hover:text-secondary duration-300">
                                     <a href="">Regular program private</a>

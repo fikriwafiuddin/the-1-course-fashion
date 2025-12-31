@@ -10,7 +10,7 @@
     <link rel="icon" href="{{ asset('logo.png') }}" type="image/svg+xml">
     @vite('resources/css/app.css')
 </head>
-<body>
+<body class="text-accent">
     <x-header/>
     
     @yield('content')
