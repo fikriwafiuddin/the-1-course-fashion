@@ -17,3 +17,7 @@ Route::get('/programs/regular-program-private', function () {
 Route::get('/program/diploma-1-year', function () {
     return view('programs.diploma-1-year');
 })->name('programs.diploma-1-year');
+
+Route::get('/programs/monthly-program', function () {
+    return view('programs.monthly-program');
+})->name('programs.monthly-program');

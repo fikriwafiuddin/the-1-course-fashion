@@ -58,7 +58,7 @@
                                         <a href="{{ route('programs.diploma-1-year') }}">Diploma 1 year</a>
                                     </li>
                                     <li class="hover:underline hover:text-secondary duration-300">
-                                        <a href="">Monthly program</a>
+                                        <a href="{{ route('programs.monthly-program') }}">Monthly program</a>
                                     </li>
                                     <li class="hover:underline hover:text-secondary duration-300">
                                         <a href="">About program</a>
@@ -157,7 +157,7 @@
                                     <a href="{{ route('programs.diploma-1-year') }}">Diploma 1 year</a>
                                 </li>
                                 <li class="hover:underline hover:text-secondary duration-300">
-                                    <a href="">Monthly program</a>
+                                    <a href="{{ route('programs.monthly-program') }}">Monthly program</a>
                                 </li>
                                 <li class="hover:underline hover:text-secondary duration-300">
                                     <a href="">About program</a>
