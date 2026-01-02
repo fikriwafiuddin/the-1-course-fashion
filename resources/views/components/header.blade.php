@@ -61,7 +61,7 @@
                                         <a href="{{ route('programs.monthly-program') }}">Monthly program</a>
                                     </li>
                                     <li class="hover:underline hover:text-secondary duration-300">
-                                        <a href="">About program</a>
+                                        <a href="{{ route('programs.about-program') }}">About program</a>
                                     </li>
                                 </ul>
                             </div>
@@ -160,7 +160,7 @@
                                     <a href="{{ route('programs.monthly-program') }}">Monthly program</a>
                                 </li>
                                 <li class="hover:underline hover:text-secondary duration-300">
-                                    <a href="">About program</a>
+                                    <a href="{{ route('programs.about-program') }}">About program</a>
                                 </li>
                             </ul>
                         </div>

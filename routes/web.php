@@ -21,3 +21,7 @@ Route::get('/program/diploma-1-year', function () {
 Route::get('/programs/monthly-program', function () {
     return view('programs.monthly-program');
 })->name('programs.monthly-program');
+
+Route::get('/programs/about-program', function () {
+    return view('programs.about-program');
+})->name('programs.about-program');
