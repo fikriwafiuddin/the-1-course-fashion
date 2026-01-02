@@ -346,6 +346,56 @@
             </p>
         </div>
     </div>
+
+    <div class="relative mt-20 overflow-hidden">
+        <div class="flex animate-scroll hover:pause-animation">
+            <!-- Set pertama -->
+            <div class="shrink-0 ml-4 min-h-64 min-w-96 rounded-4xl bg-primary/60 overflow-hidden flex justify-center items-center">
+                <img
+                    src="/assets/gallery1.png"
+                    alt="gallery 1"
+                    class="max-h-64"
+                >
+            </div>
+            <div class="shrink-0 ml-4 min-h-64 min-w-96 rounded-4xl bg-primary/60 overflow-hidden flex justify-center items-center">
+                <img
+                    src="/assets/gallery2.png"
+                    alt="gallery 2"
+                    class="max-h-64"
+                >
+            </div>
+            <div class="shrink-0 ml-4 min-h-64 min-w-96 rounded-4xl bg-primary/60 overflow-hidden flex justify-center items-center">
+                <img
+                    src="/assets/gallery3.png"
+                    alt="gallery 3"
+                    class="max-h-64"
+                >
+            </div>
+            
+            <!-- Set kedua (duplikat untuk infinite loop) -->
+            <div class="shrink-0 ml-4 min-h-64 min-w-96 rounded-4xl bg-primary/60 overflow-hidden flex justify-center items-center">
+                <img
+                    src="/assets/gallery1.png"
+                    alt="gallery 1"
+                    class="max-h-64"
+                >
+            </div>
+            <div class="shrink-0 ml-4 min-h-64 min-w-96 rounded-4xl bg-primary/60 overflow-hidden flex justify-center items-center">
+                <img
+                    src="/assets/gallery2.png"
+                    alt="gallery 2"
+                    class="max-h-64"
+                >
+            </div>
+            <div class="shrink-0 ml-4 min-h-64 min-w-96 rounded-4xl bg-primary/60 overflow-hidden flex justify-center items-center">
+                <img
+                    src="/assets/gallery3.png"
+                    alt="gallery 3"
+                    class="max-h-64"
+                >
+            </div>
+        </div>
+    </div>
 </section>
 
 {{-- Testimony Section --}}
