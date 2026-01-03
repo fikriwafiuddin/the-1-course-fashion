@@ -1,11 +1,13 @@
 <header class="sticky bg-white top-0 z-50 w-full shadow-[0_4px_4px_rgba(0,0,0,0.25)] font-poppins">
     <div class="flex justify-between items-center px-6 sm:px-8 py-2">
         <div class="rounded-full bg-primary p-1 sm:p-2">
-            <img
-                src="/logo.png"
-                alt="logo"
-                class="w-8 sm:w-10 2xl:w-16"
-            >
+            <a href="{{ route('home') }}">
+                <img
+                    src="/logo.png"
+                    alt="logo"
+                    class="w-8 sm:w-10 2xl:w-16"
+                >
+            </a>
         </div>
 
         <div class="hidden sm:flex w-full max-w-2xl gap-8 justify-end lg:justify-between">
@@ -13,7 +15,7 @@
                 <ul class="flex gap-8">
                     <li>
                         <a
-                            href="#home"
+                            href="{{ request()->routeIs('home') ? '#home' : route('home') . '/#home' }}"
                             class="nav-link hover:underline hover:text-secondary duration-300"
                         >
                             Home
@@ -21,7 +23,7 @@
                     </li>
                     <li>
                         <a
-                            href="#about"
+                            href="{{ request()->routeIs('home') ? '#about' : route('home') . '/#about' }}"
                             class="nav-link hover:underline hover:text-secondary duration-300"
                         >
                             About
@@ -69,7 +71,7 @@
                     </li>
                     <li>
                         <a
-                            href="#gallery"
+                            href="{{ request()->routeIs('home') ? '#gallery' : route('home') . '/#gallery' }}"
                             class="nav-link hover:underline hover:text-secondary duration-300"
                         >
                             Galeri
@@ -77,7 +79,7 @@
                     </li>
                     <li>
                         <a
-                            href="#testimony"
+                            href="{{ request()->routeIs('home') ? '#testimony' : route('home') . '/#testimony' }}"
                             class="nav-link hover:underline hover:text-secondary duration-300"
                         >
                             Testimoni
@@ -114,7 +116,7 @@
                 <ul class="space-y-2">
                     <li>
                         <a
-                            href="#home"
+                            href="{{ request()->routeIs('home') ? '#home' : route('home') . '/#home' }}"
                             class="hover:underline hover:text-secondary duration-300"
                         >
                             Home
@@ -122,7 +124,7 @@
                     </li>
                     <li>
                         <a
-                            href="#about"
+                            href="{{ request()->routeIs('home') ? '#about' : route('home') . '/#about' }}"
                             class="hover:underline hover:text-secondary duration-300"
                         >
                             About
@@ -167,7 +169,7 @@
                     </li>
                     <li>
                         <a
-                            href="#gallery"
+                            href="{{ request()->routeIs('home') ? '#gallery' : route('home') . '/#gallery' }}"
                             class="hover:underline hover:text-secondary duration-300"
                         >
                             Galeri
@@ -175,7 +177,7 @@
                     </li>
                     <li>
                         <a
-                            href="#testimony"
+                            href="{{ request()->routeIs('home') ? '#testimony' : route('home') . '/#testimony' }}"
                             class="hover:underline hover:text-secondary duration-300"
                         >
                             Testimoni
