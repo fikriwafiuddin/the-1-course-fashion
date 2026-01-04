@@ -1,0 +1,112 @@
+---
+
+import "../styles/global.css";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+
+const { title } = Astro.props;
+
+---
+
+<!doctype html>
+<html lang="id" class="scroll-smooth">
+	<head>
+		<meta charset="UTF-8" />
+    	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<link rel="icon" type="image/svg+xml" href="/logo.png" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{title} the1coursefashion</title>
+	</head>
+	<body class="text-accent">
+		<Header />
+
+		<slot />
+
+		<Footer />
+
+		<slot name="scripts" />
+		<script>
+			const navLinks = document.querySelectorAll('.nav-link')
+			const sections = document.querySelectorAll('section[id]')
+
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach(entry => {
+						if (entry.isIntersecting) {
+							const id = entry.target.getAttribute('id')
+
+							navLinks.forEach(link => {
+								link.classList.remove('underline', 'text-secondary')
+
+								if (link.getAttribute('href') === `#${id}`) {
+									link.classList.add('underline', 'text-secondary')
+								}
+							})
+						}
+					})
+				},
+				{
+					threshold: 0.6,
+				}
+			)
+
+			sections.forEach(section => observer.observe(section))
+
+
+			const hamburger = document.getElementById('hamburger');
+			const mobileMenu = document.getElementById('mobileMenu');
+
+			hamburger?.addEventListener('click', () => {
+				if (mobileMenu?.classList.contains('max-h-0')) {
+					mobileMenu?.classList.remove('max-h-0', 'opacity-0');
+					mobileMenu?.classList.add('max-h-[500px]', 'opacity-100', 'scale-100');
+					hamburger.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-6"><path fill-rule="evenodd" d="M5.47 5.47a.75.75 0 0 1 1.06 0L12 10.94l5.47-5.47a.75.75 0 1 1 1.06 1.06L13.06 12l5.47 5.47a.75.75 0 1 1-1.06 1.06L12 13.06l-5.47 5.47a.75.75 0 0 1-1.06-1.06L10.94 12 5.47 6.53a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" /></svg>'
+				} else {
+					mobileMenu?.classList.add('max-h-0', 'opacity-0', 'scale-0');
+					mobileMenu?.classList.remove('max-h-[500px]', 'opacity-100');
+					hamburger.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-6"><path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" /></svg>'
+				}
+			});
+
+			const toggleDropdownPrograms = document.getElementById('toggleDropdownPrograms')
+			const iconTogleDropdownPrograms = document.getElementById('iconTogleDropdownPrograms')
+			const dropdownPrograms = document.getElementById('dropdownPrograms')
+
+			toggleDropdownPrograms?.addEventListener('click', () => {
+				if (dropdownPrograms?.classList.contains('max-h-0')) {
+					dropdownPrograms?.classList.remove('max-h-0', 'opacity-0');
+					dropdownPrograms?.classList.add('max-h-[500px]', 'opacity-100', 'scale-100');
+					if (iconTogleDropdownPrograms) {
+						iconTogleDropdownPrograms.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4"><path fill-rule="evenodd" d="M11.47 7.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z" clip-rule="evenodd" /></svg>'
+					}
+				} else {
+					dropdownPrograms?.classList.add('max-h-0', 'opacity-0', 'scale-0');
+					dropdownPrograms?.classList.remove('max-h-[500px]', 'opacity-100');
+					if (iconTogleDropdownPrograms) {
+						iconTogleDropdownPrograms.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" /></svg>'
+					}
+				}
+			});
+
+			const toggleDropdownProgramsMobile = document.getElementById('toggleDropdownProgramsMobile')
+			const iconTogleDropdownProgramsMobile = document.getElementById('iconTogleDropdownProgramsMobile')
+			const dropdownProgramsMobile = document.getElementById('dropdownProgramsMobile')
+
+			toggleDropdownProgramsMobile?.addEventListener('click', () => {
+				if (dropdownProgramsMobile?.classList.contains('max-h-0')) {
+					dropdownProgramsMobile?.classList.remove('max-h-0', 'opacity-0');
+					dropdownProgramsMobile?.classList.add('max-h-[500px]', 'opacity-100', 'scale-100');
+					if (iconTogleDropdownProgramsMobile) {
+						iconTogleDropdownProgramsMobile.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4"><path fill-rule="evenodd" d="M11.47 7.72a.75.75 0 0 1 1.06 0l7.5 7.5a.75.75 0 1 1-1.06 1.06L12 9.31l-6.97 6.97a.75.75 0 0 1-1.06-1.06l7.5-7.5Z" clip-rule="evenodd" /></svg>'
+					}
+				} else {
+					dropdownProgramsMobile?.classList.add('max-h-0', 'opacity-0', 'scale-0');
+					dropdownProgramsMobile?.classList.remove('max-h-[500px]', 'opacity-100');
+					if (iconTogleDropdownProgramsMobile) {
+						iconTogleDropdownProgramsMobile.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4"><path fill-rule="evenodd" d="M12.53 16.28a.75.75 0 0 1-1.06 0l-7.5-7.5a.75.75 0 0 1 1.06-1.06L12 14.69l6.97-6.97a.75.75 0 1 1 1.06 1.06l-7.5 7.5Z" clip-rule="evenodd" /></svg>'
+					}
+				}
+			});
+		</script>
+	</body>
+</html>
